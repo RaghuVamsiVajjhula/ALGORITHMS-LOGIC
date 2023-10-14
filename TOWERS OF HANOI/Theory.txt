@@ -1,0 +1,52 @@
+There is a tower which is containing of n number of discs.
+These discs are arranged in order of ascending order which means the smaller sized disc
+remains on top and bigger sized discs are place at the bottom of tower.
+
+Now we need to move our discs from one tower to another.
+
+Condtion to be followed:
+It should not be in an order where the bigger disc is placed on top of smaller disc.
+
+We cannot transfer the discs from 2 towers. So we take 3 towers.
+Let them be 
+Tower 1,2,3.
+
+Now asssume there is only one disc in tower 1.We can easily tranfer it to Tower 3.
+
+Now assume there are 2 discs.We now transfer first disc to Tower 2 and second to Tower 3.Now tranfer another 
+disc from Tower 2 to Tower 3.
+
+
+Now when we take 3 discs in Tower A.
+
+First move first 2 discs from Tower A to Tower B.
+Now move the remaining disc in Tower A to Tower C.
+
+After moving, now move remaining discs from Tower B to Tower C.
+
+Here we can think the algorith like:
+
+There are n discs and we need to move them from Tower 1 to Tower 3.
+
+Now Move n-1 discs from Tower1 to Tower2.
+Move the remaining disc from Tower1 to Tower3.
+
+Perform same operation in order to arrange them properly.
+
+
+ALGORITHM:
+
+n:number of discs
+a,b,c are towers
+
+
+void TowersOfHanoi(int n,int a,int b,int c)
+{
+    if(n>0)
+    {                               
+        TowersOfHanoi(n-1,A,C,B);  //Here A is source and B is destination.//Here the tower C is used by us to store the remaining discs.
+        printf("Move a disc from %d to %d",A,C);
+        TowersOfHanoi(n-1,B,A,C)  //Here B is source and C is dest and we are using Tower a.
+
+    }
+}
