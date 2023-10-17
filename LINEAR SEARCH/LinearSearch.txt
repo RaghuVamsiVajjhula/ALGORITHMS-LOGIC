@@ -1,0 +1,15 @@
+Linear Search is a search operation performed in a way that each and every element in 
+the array or list is scanned one after another untill the element is found.
+
+If element is not found it will return -1.
+
+Here we will be creating a variable which will go through all the elements in the
+array and verify every element with the value given by the user to find.
+
+It is diffcult to use this method when we have many number of elements in our array.
+Because it will check each and every element which will consume lot of time and resources 
+of the system.
+
+
+
+
